@@ -1,0 +1,140 @@
+@media (min-width:1200px){
+    html,body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .img{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+  
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+
+    .w3-third img {
+        margin-bottom: -6px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-third img:hover {
+        opacity: 1
+    }
+}
+@media (min-width:767px){
+    html,body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .img{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+    #me{
+        width: 400px;
+        height: 400px;
+       
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+
+    .w3-third img {
+        margin-bottom: -6px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-third img:hover {
+        opacity: 1
+    }
+}
+@media (max-width:768px){
+    html,body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .img{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+    .img2{
+        width: 100px;
+        height: 100px;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+
+    .w3-third img {
+        margin-bottom: -6px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-third img:hover {
+        opacity: 1
+    }
+    #me{
+        width: 300px;
+        height: 300px;
+      
+    }
+}
+@media (max-width:1200px){
+    html,body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .img{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+    .img2{
+        width: 100px;
+        height: 100px;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+
+    .w3-third img {
+        margin-bottom: -6px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-third img:hover {
+        opacity: 1
+    }
+    #me{
+        width: 300px;
+        height: 300px;
+       
+    }
+}

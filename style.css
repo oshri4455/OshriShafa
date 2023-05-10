@@ -4,8 +4,9 @@
         overflow-x: hidden;
     }
     .img{
-        width: 120px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        text-align:center;
         border-radius: 100%;
     }
   
@@ -40,8 +41,9 @@
         overflow-x: hidden;
     }
     .img{
-        width: 120px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        text-align:center;
         border-radius: 100%;
     }
     #me{
@@ -78,8 +80,9 @@
         overflow-x: hidden;
     }
     .img{
-        width: 120px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        text-align:center;
         border-radius: 100%;
     }
     .img2{

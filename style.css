@@ -4,8 +4,8 @@
         overflow-x: hidden;
     }
     .img{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 100%;
     }
   
@@ -40,8 +40,8 @@
         overflow-x: hidden;
     }
     .img{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 100%;
     }
     #me{
@@ -78,8 +78,8 @@
         overflow-x: hidden;
     }
     .img{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 100%;
     }
     .img2{

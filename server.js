@@ -43,7 +43,7 @@ app.post('/contact', (req, res) => {
   };
   const addContactToDb = async (tp) => {
     await contact.insertMany(tp);
-    res.send(`Thank you${temp.name}`)
+    res.send(`Thank you ${temp.name}`)
   };
   addContactToDb(temp);
 });

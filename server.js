@@ -37,9 +37,9 @@ const contact = db.model('contacts', myContactDB);
 
 app.post('/contact', (req, res) => {
   let temp = {
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message
+    name: req.body.Name,
+    email: req.body.Email,
+    message: req.body.Message
   };
   const addContactToDb = async (tp) => {
     await contact.insertMany(tp);
@@ -47,5 +47,7 @@ app.post('/contact', (req, res) => {
   };
   addContactToDb(temp);
 });
+
+
 
 

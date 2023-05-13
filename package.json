@@ -27,6 +27,7 @@
     "fresh": "^0.5.2",
     "function-bind": "^1.1.1",
     "get-intrinsic": "^1.2.0",
+    "gh-pages": "^5.0.0",
     "has": "^1.0.3",
     "has-symbols": "^1.0.3",
     "http-errors": "^2.0.0",
@@ -79,7 +80,6 @@
     "webidl-conversions": "^7.0.0",
     "whatwg-url": "^11.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

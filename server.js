@@ -1,7 +1,3 @@
-
-
-
-
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -9,6 +5,28 @@ const mongoose = require('mongoose');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('pages'));
+
+
+app.post('/webhook', (req, res) => {
+  const payload = req.body;
+  console.log('Received POST webhook payload:', payload);
+  // כאן תוכל לבצע פעולות נוספות עם הפולידה
+
+  res.sendStatus(200); // שליחת תגובת 200 OK
+});
+
+// מסלול GET
+app.get('/webhook', (req, res) => {
+  // כאן תוכל לבצע פעולות נוספות כאשר מתבצעת בקשת GET ל-webhook
+
+  res.send('Hello, this is a GET webhook!'); // שליחת תגובה חזרה
+});
+
+
+
+
+
+
 
 app.post('/webhook-endpoint', (req, res) => {
   const payload = req.body;
@@ -47,7 +65,7 @@ app.post('/contact', (req, res) => {
 });
 
 mongoose
-  .connect('mongodb://localhost:27017/contactList', { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb://127.0.0.1:27017/contactList', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(3000, () => {
@@ -57,3 +75,4 @@ mongoose
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
   });
+  

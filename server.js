@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('pages'));
-
 
 app.post('/webhook', (req, res) => {
   const payload = req.body;
@@ -15,27 +15,15 @@ app.post('/webhook', (req, res) => {
   res.sendStatus(200); // שליחת תגובת 200 OK
 });
 
-// מסלול GET
 app.get('/webhook', (req, res) => {
   // כאן תוכל לבצע פעולות נוספות כאשר מתבצעת בקשת GET ל-webhook
 
   res.send('Hello, this is a GET webhook!'); // שליחת תגובה חזרה
 });
 
-
-
-
-
-
-
-app.post('/webhook-endpoint', (req, res) => {
-  const payload = req.body;
-  console.log('Received webhook payload:', payload);
-  // כאן תוכל לבצע פעולות נוספות עם הפולידה, כמו לשמור אותה במסד הנתונים
-
-  res.sendStatus(200); // שליחת תגובת 200 OK
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + 'pages/index.html'));
 });
-
 const myContactSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -45,18 +33,18 @@ const myContactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', myContactSchema);
 
 app.post('/contact', (req, res) => {
-  const { name, email, message } = req.body;
+  const { Name, Email, Message } = req.body;
 
   const newContact = new Contact({
-    name,
-    email,
-    message
+    Name,
+    Email,
+    Message
   });
-
+  
   newContact
     .save()
     .then(() => {
-      res.send(`Thank you ${name}`);
+      res.send(`Thank you ${Name}`);
     })
     .catch((error) => {
       console.error('Error saving contact:', error);
@@ -75,4 +63,3 @@ mongoose
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
   });
-  
